@@ -20,6 +20,7 @@
   "scripts": {
     "build": "tsup ./src/index.ts",
     "test": "vitest",
+    "lint": "eslint src/**/*.ts test/**/*.ts --fix",
     "prepare": "npm run build"
   },
   "repository": {
@@ -46,6 +47,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.8",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-vitest": "^0.3.8",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
