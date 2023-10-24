@@ -1,0 +1,39 @@
+{
+  "name": "json-files-query",
+  "version": "0.1.0",
+  "description": "A library that enables querying of local JSON file collections.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiwv/json-files-query.git"
+  },
+  "keywords": [
+    "JSON",
+    "query",
+    "data retrieval",
+    "data manipulation",
+    "JavaScript",
+    "library"
+  ],
+  "author": "yiwv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yiwv/json-files-query/issues"
+  },
+  "homepage": "https://github.com/yiwv/json-files-query#readme",
+  "dependencies": {
+    "destr": "^2.0.1",
+    "unstorage": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.8",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "2",
+  "title": "Understanding Asynchronous JavaScript",
+  "content": "This article explains the concept of asynchronous programming in JavaScript...",
+  "author": "Author Two",
+  "isPublished": true,
+  "publishedDate": "2023-02-20",
+  "readers": 270,
+  "category": "Programming"
+}
