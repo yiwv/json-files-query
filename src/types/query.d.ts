@@ -1,5 +1,5 @@
 import { ContentQueryFindResponse, ContentQueryFindOneResponse, ContentQueryCountResponse, ContentQueryWithSurround, ContentQueryWithDirConfig } from './api';
-import { ContentQueryCountResponse, ContentQueryResponse, ParsedContentInternalMeta, ParsedContentMeta } from '.';
+import { ParsedContentInternalMeta, ParsedContentMeta } from '.';
 /**
  * Query
  */
