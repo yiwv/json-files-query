@@ -106,7 +106,6 @@ var withKeys = (keys = []) => (obj) => {
 };
 var sortList = (data, params) => {
   const comperable = new Intl.Collator(params.$locale, {
-    numeric: params.$numeric,
     caseFirst: params.$caseFirst,
     sensitivity: params.$sensitivity
   });
@@ -124,6 +123,9 @@ var sortList = (data, params) => {
       });
       if (params[key] === -1) {
         values.reverse();
+      }
+      if (params.$numeric && !isNaN(values[0]) && !isNaN(values[1])) {
+        return Number(values[0]) - Number(values[1]);
       }
       return comperable.compare(values[0], values[1]);
     });

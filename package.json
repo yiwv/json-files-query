@@ -1,6 +1,6 @@
 {
   "name": "json-files-query",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A library that enables querying of local JSON file collections.",
   "files": [
     "dist",

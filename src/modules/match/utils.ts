@@ -59,7 +59,6 @@ export const withKeys = (keys: string[] = []) => (obj: any) => {
  */
 export const sortList = (data: any[], params: SortOptions) => {
   const comperable = new Intl.Collator(params.$locale as string, {
-    numeric: params.$numeric as boolean,
     caseFirst: params.$caseFirst as 'upper' | 'lower' | 'false',
     sensitivity: params.$sensitivity as 'base' | 'accent' | 'case' | 'variant'
   });
@@ -81,6 +80,10 @@ export const sortList = (data: any[], params: SortOptions) => {
         });
       if (params[key as keyof SortOptions] === -1) {
         values.reverse();
+      }
+      // Sort numerically if enabled and both values are numeric
+      if (params.$numeric && !isNaN(values[0]) && !isNaN(values[1])) {
+        return Number(values[0]) - Number(values[1]);
       }
       return comperable.compare(values[0], values[1]);
     });
